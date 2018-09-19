@@ -10,8 +10,8 @@ A user portal app in ReactJS (Typescript). This app was created using Create Rea
 
 Clone this repository:
 ```
-  $ git clone https://github.com/charlon/university-portal.git
-  $ cd university-portal
+  $ git clone https://github.com/charlon/portal-app.git
+  $ cd portal-app
 ```
 
 Install Node dependencies:
