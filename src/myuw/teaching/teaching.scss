@@ -1,0 +1,16 @@
+@import '../common/mixins.scss';
+@import '../common/variables.scss';
+
+h1 { color: $yellow-green; }
+
+.myuw-teaching { outline: dashed 1px blue;
+
+  @include breakpoint(desktop) {
+    max-width: calc(100vw - 248px);
+  }
+
+  @include breakpoint(largedesktop) {
+  max-width: 952px;
+  }
+
+}

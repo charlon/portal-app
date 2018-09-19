@@ -1,0 +1,161 @@
+/** mixins **/
+/** variables **/
+body {
+  min-width: 320px; }
+
+/** utilities ***/
+.u-slide {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden; }
+  @media (min-width: 1024px) {
+    .u-slide {
+      max-height: unset; } }
+
+.u-slide-down {
+  max-height: 1000px !important; }
+
+.u-active {
+  background: #ddd;
+  color: #7b59b3 !important; }
+  .u-active i {
+    color: #452a78 !important; }
+
+/** global elements **/
+.bp-container {
+  margin: 0 auto;
+  padding: 0 16px; }
+  @media (min-width: 1024px) {
+    .bp-container {
+      max-width: 1200px; } }
+
+/** header section **/
+.bp-header {
+  clear: both; }
+  .bp-header .bp-thin-bar {
+    background: #452a78;
+    line-height: 40px;
+    height: 40px;
+    font-size: 14px; }
+    .bp-header .bp-thin-bar .bp-user {
+      display: inline-block;
+      color: #fff;
+      font-size: 13px; }
+    .bp-header .bp-thin-bar .bp-links {
+      display: inline-block;
+      text-align: right;
+      color: #fff;
+      font-size: 13px;
+      float: right; }
+      .bp-header .bp-thin-bar .bp-links ul {
+        list-style: none; }
+        .bp-header .bp-thin-bar .bp-links ul li {
+          display: inline-block;
+          margin-left: 8px; }
+  .bp-header .bp-masthead {
+    background: #4b2e83;
+    height: 65px; }
+    .bp-header .bp-masthead .bp-title-mobile {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      white-space: nowrap;
+      line-height: 65px;
+      height: 65px; }
+      .bp-header .bp-masthead .bp-title-mobile .bp-title-button {
+        padding: 0;
+        margin: 0;
+        background: none;
+        border: none; }
+      .bp-header .bp-masthead .bp-title-mobile .bp-title-button-icon {
+        font-size: 14px;
+        color: #ccc;
+        vertical-align: middle;
+        margin-top: -5px; }
+      @media (min-width: 1024px) {
+        .bp-header .bp-masthead .bp-title-mobile {
+          display: none; } }
+    .bp-header .bp-masthead .bp-title-desktop {
+      display: none; }
+      @media (min-width: 1024px) {
+        .bp-header .bp-masthead .bp-title-desktop {
+          display: block;
+          color: #fff;
+          font-size: 26px;
+          font-weight: 400;
+          line-height: 65px;
+          height: 65px; } }
+    .bp-header .bp-masthead .bp-logo {
+      background-repeat: no-repeat;
+      background-size: 45px;
+      background-position: right 20px bottom;
+      height: 65px; }
+
+/** body section **/
+.bp-body {
+  background: #f5f5f5;
+  padding-bottom: 16px; }
+  @media (min-width: 1024px) {
+    .bp-body .bp-container {
+      padding-top: 32px;
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start; } }
+
+/** nav menu ***/
+.bp-navigation {
+  font-size: 16px; }
+  @media (min-width: 1024px) {
+    .bp-navigation {
+      width: 200px;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
+      flex: 0 1 auto; } }
+  .bp-navigation .bp-welcome {
+    display: none; }
+    @media (min-width: 1024px) {
+      .bp-navigation .bp-welcome {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 16px;
+        margin-top: 16px;
+        font-size: 14px; } }
+  .bp-navigation ul {
+    margin: 3px;
+    padding: 0;
+    list-style: none; }
+    @media (min-width: 1024px) {
+      .bp-navigation ul {
+        margin: 3px; } }
+    .bp-navigation ul li {
+      margin: 0;
+      padding: 0;
+      line-height: 30px;
+      margin-bottom: 10px; }
+      .bp-navigation ul li:first-child {
+        margin-top: 10px; }
+        @media (min-width: 1024px) {
+          .bp-navigation ul li:first-child {
+            margin-top: 0; } }
+      .bp-navigation ul li a {
+        display: block;
+        padding-left: 8px;
+        color: #333;
+        font-weight: lighter; }
+        .bp-navigation ul li a i {
+          margin-right: 8px; }
+      .bp-navigation ul li hr {
+        border-top: solid 1px #ddd;
+        margin: 0; }
+
+/** main section **/
+.bp-main {
+  min-height: calc(100vh - 105px); }
+  @media (min-width: 1024px) {
+    .bp-main {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      flex: 1 1 auto;
+      margin-left: 16px; } }

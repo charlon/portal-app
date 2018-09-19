@@ -1,0 +1,12 @@
+/** mixins **/
+h1 {
+  color: #b0eb00; }
+
+.myuw-teaching {
+  outline: dashed 1px blue; }
+  @media (min-width: 1024px) {
+    .myuw-teaching {
+      max-width: calc(100vw - 248px); } }
+  @media (min-width: 1200px) {
+    .myuw-teaching {
+      max-width: 952px; } }

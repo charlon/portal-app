@@ -1,0 +1,186 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+body { min-width: 320px; }
+
+/** utilities ***/
+
+.u-slide { max-height: 0; transition: max-height 0.5s ease-in-out; overflow: hidden;
+  @include breakpoint(desktop) {
+    max-height: unset; // unset 0 height to show contents by default on desktop
+  }
+}
+.u-slide-down {
+  max-height: 1000px !important;
+}
+
+.u-active { background: #ddd; color: #7b59b3 !important;
+  i { color: #452a78 !important; }
+}
+
+/** global elements **/
+.bp-container {
+
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include breakpoint(desktop) {
+    max-width: 1200px;
+  }
+}
+
+
+
+/** header section **/
+.bp-header { clear: both;
+
+  .bp-thin-bar {
+    background: #452a78;
+    line-height: 40px;
+    height: $bar-height;
+    font-size: 14px;
+
+    .bp-user {
+      display: inline-block;;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .bp-links {
+      display: inline-block;
+      text-align: right;
+      color: #fff;
+      font-size: 13px;
+      float: right;
+
+      ul {
+        list-style: none;
+        li { display: inline-block; margin-left: 8px; }
+      }
+    }
+  }
+
+  .bp-masthead {
+    background: #4b2e83;
+    height: $nav-height;
+
+    .bp-title-mobile {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      white-space: nowrap;
+      line-height:$nav-height;
+      height: $nav-height;
+
+      .bp-title-button  { padding: 0; margin: 0; background: none; border: none; }
+      .bp-title-button-icon { font-size: 14px; color: #ccc; vertical-align: middle; margin-top: -5px;}
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+
+    }
+
+    .bp-title-desktop {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: block;
+        color: #fff;
+        font-size: 26px;
+        font-weight: 400;
+        line-height:$nav-height;
+        height: $nav-height;
+      }
+
+    }
+
+    .bp-logo {
+      background-repeat: no-repeat;
+      background-size: 45px;
+      background-position: right 20px bottom;
+      height: $nav-height;
+    }
+
+  }
+
+}
+
+/** body section **/
+.bp-body { background: #f5f5f5; padding-bottom: 16px;
+
+    @include breakpoint(desktop) {
+      .bp-container {
+        padding-top: 32px;
+        display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      }
+    }
+
+}
+
+/** nav menu ***/
+.bp-navigation { font-size: 16px;
+
+  @include breakpoint(desktop) {
+    width: 200px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex: 0 1 auto;
+  }
+
+  // only show the welcome container on desktop
+  .bp-welcome { display: none;
+
+    @include breakpoint(desktop) {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+  }
+  .bp-menu { }
+
+  ul { margin: 3px; padding: 0; list-style: none;
+
+    @include breakpoint(desktop) { margin: 3px; }
+
+    li { margin: 0; padding: 0; line-height: 30px; margin-bottom: 10px;
+
+      &:first-child { margin-top: 10px;
+        @include breakpoint(desktop) { margin-top: 0; }
+      }
+
+      a { display: block; padding-left: 8px; color: #333; font-weight: lighter;
+        i { margin-right: 8px; }
+      }
+
+      hr { border-top: solid 1px #ddd; margin: 0;}
+    }
+
+  }
+
+}
+
+
+
+
+/** main section **/
+.bp-main { 
+
+   min-height: calc(100vh - 105px); // bp-thin-bar + bp-navigation height
+
+  @include breakpoint(desktop) {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex: 1 1 auto;
+
+    margin-left: 16px;
+  }
+
+}

@@ -1,0 +1,88 @@
+@import '../common/mixins.scss';
+@import '../common/variables.scss';
+
+// bootstrap class override
+.card { margin-bottom: 8px;
+
+  @include breakpoint(desktop) {
+    width: 300px;
+    margin-right: 8px;
+
+  }
+
+  .card-title { color: purple; }
+}
+
+// ticker container
+.myuw-ticker { outline: dashed 1px lime;
+
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @include breakpoint(desktop) {
+    margin-top: 0;
+  }
+
+  .myuw-ticker-card {
+
+    border-bottom: solid 1px #ddd;
+    text-align: center;
+    white-space: nowrap;
+
+    a { font-size: 12px; color: #666; text-transform: capitalize;
+      i { font-size: 14px; }
+      span { font-size: 16px; font-weight: bold; color: #333; display: block; margin-top: -4px;}
+    }
+
+    @include breakpoint(desktop) {
+      display: inline-block;
+      border-bottom: none;
+      border-left: solid 1px #ddd;
+      width: 160px;
+      text-align: left;
+    }
+  }
+
+  .myuw-ticker-left {
+
+    .myuw-ticker-card { padding: 0 0 8px 0;
+      @include breakpoint(desktop) { padding: 0 0 0 8px; }
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: 0;
+      display: inline-block;
+      width: 25%;
+    }
+
+  }
+
+  .myuw-ticker-right { display: flex; text-align: right;
+
+    .myuw-ticker-card { flex-grow: 1; flex-shrink: 1; flex-basis: auto;; flex: 1 1 auto; width: 100%; padding: 8px 0;
+      @include breakpoint(desktop) { width: auto;  padding: 0 8px; }
+    }
+
+    @include breakpoint(desktop) {
+      display: inline-block;
+      width: 75%;
+    }
+
+  }
+
+
+
+}
+
+// home container
+.myuw-home { outline: dashed 1px red;
+
+  @include breakpoint(desktop) {
+    max-width: calc(100vw - 248px);
+  }
+
+  @include breakpoint(largedesktop) {
+  max-width: 952px;
+  }
+
+}

@@ -1,0 +1,77 @@
+/** mixins **/
+.card {
+  margin-bottom: 8px; }
+  @media (min-width: 1024px) {
+    .card {
+      width: 300px;
+      margin-right: 8px; } }
+  .card .card-title {
+    color: purple; }
+
+.myuw-ticker {
+  outline: dashed 1px lime;
+  margin-top: 16px;
+  margin-bottom: 16px; }
+  @media (min-width: 1024px) {
+    .myuw-ticker {
+      margin-top: 0; } }
+  .myuw-ticker .myuw-ticker-card {
+    border-bottom: solid 1px #ddd;
+    text-align: center;
+    white-space: nowrap; }
+    .myuw-ticker .myuw-ticker-card a {
+      font-size: 12px;
+      color: #666;
+      text-transform: capitalize; }
+      .myuw-ticker .myuw-ticker-card a i {
+        font-size: 14px; }
+      .myuw-ticker .myuw-ticker-card a span {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-top: -4px; }
+    @media (min-width: 1024px) {
+      .myuw-ticker .myuw-ticker-card {
+        display: inline-block;
+        border-bottom: none;
+        border-left: solid 1px #ddd;
+        width: 160px;
+        text-align: left; } }
+  .myuw-ticker .myuw-ticker-left .myuw-ticker-card {
+    padding: 0 0 8px 0; }
+    @media (min-width: 1024px) {
+      .myuw-ticker .myuw-ticker-left .myuw-ticker-card {
+        padding: 0 0 0 8px; } }
+  @media (min-width: 1024px) {
+    .myuw-ticker .myuw-ticker-left {
+      margin-bottom: 0;
+      display: inline-block;
+      width: 25%; } }
+  .myuw-ticker .myuw-ticker-right {
+    display: flex;
+    text-align: right; }
+    .myuw-ticker .myuw-ticker-right .myuw-ticker-card {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      flex: 1 1 auto;
+      width: 100%;
+      padding: 8px 0; }
+      @media (min-width: 1024px) {
+        .myuw-ticker .myuw-ticker-right .myuw-ticker-card {
+          width: auto;
+          padding: 0 8px; } }
+    @media (min-width: 1024px) {
+      .myuw-ticker .myuw-ticker-right {
+        display: inline-block;
+        width: 75%; } }
+
+.myuw-home {
+  outline: dashed 1px red; }
+  @media (min-width: 1024px) {
+    .myuw-home {
+      max-width: calc(100vw - 248px); } }
+  @media (min-width: 1200px) {
+    .myuw-home {
+      max-width: 952px; } }
