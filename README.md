@@ -1,5 +1,5 @@
-# university-portal
-A university user portal app in ReactJS (Typescript). This app was created using Create React App.
+# portal-app
+A user portal app in ReactJS (Typescript). This app was created using Create React App.
 
 ### Prerequisites
 * Node
