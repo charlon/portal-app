@@ -40,7 +40,7 @@ class Home extends React.Component<any, any> {
 
         <div className="myuw-home">
 
-        <div className="container p-0">
+
           <div className="row no-gutters">
             <div className="col-md-8 pr-2">
               <ExampleCard wait={1000} />
@@ -51,7 +51,7 @@ class Home extends React.Component<any, any> {
               <AcademicCalendar compiler="TypeScript" framework="React" />
             </div>
           </div>
-        </div>
+  
 
         </div>
 
