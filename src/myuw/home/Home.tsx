@@ -39,10 +39,20 @@ class Home extends React.Component<any, any> {
         </div>
 
         <div className="myuw-home">
-          <ExampleCard wait={1000} />
-          <ButtonCounter title="Button Counter" subtitle="Click the Button for stuff!" />
-          <ExampleCard wait={1300} />
-          <AcademicCalendar compiler="TypeScript" framework="React" />
+
+        <div className="container p-0">
+          <div className="row no-gutters">
+            <div className="col-md-8 pr-2">
+              <ExampleCard wait={1000} />
+              <ButtonCounter title="Button Counter" subtitle="Click the Button for stuff!" />
+              <ExampleCard wait={1300} />
+            </div>
+            <div className="col-md-4 pl-2">
+              <AcademicCalendar compiler="TypeScript" framework="React" />
+            </div>
+          </div>
+        </div>
+
         </div>
 
       </div>
